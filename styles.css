@@ -1,0 +1,1625 @@
+/* IBM SkillsBuild Community Hub - Redesigned to match uploaded images */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'IBM Plex Sans', sans-serif;
+    background-color: #f4f4f4;
+    color: #161616;
+    line-height: 1.5;
+}
+
+/* Header */
+.header {
+    background: #1e3a8a;
+    color: white;
+    padding: 1rem 0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.header-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header-left {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.ibm-logo {
+    height: 24px;
+    filter: brightness(0) invert(1);
+}
+
+.brand-text {
+    font-size: 1.1rem;
+    font-weight: 500;
+}
+
+.header-right {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.notifications {
+    font-size: 1.2rem;
+}
+
+.user-menu {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    cursor: pointer;
+}
+
+.profile-avatar {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+}
+
+/* Navigation Tabs */
+.nav-tabs {
+    background: white;
+    border-bottom: 1px solid #e0e0e0;
+    position: sticky;
+    top: 60px;
+    z-index: 99;
+}
+
+.nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    display: flex;
+    gap: 2rem;
+}
+
+.nav-tab {
+    background: none;
+    border: none;
+    padding: 1rem 0;
+    font-size: 1rem;
+    font-weight: 500;
+    color: #525252;
+    cursor: pointer;
+    border-bottom: 3px solid transparent;
+    transition: all 0.3s ease;
+}
+
+.nav-tab.active {
+    color: #1e3a8a;
+    border-bottom-color: #1e3a8a;
+}
+
+.nav-tab:hover {
+    color: #1e3a8a;
+}
+
+/* Main Content */
+.main-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+.page {
+    display: none;
+}
+
+.page.active {
+    display: block;
+}
+
+/* Challenge Hero Section */
+.challenge-hero {
+    background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%);
+    color: white;
+    padding: 2rem;
+    border-radius: 12px;
+    margin-bottom: 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.challenge-hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 200px;
+    height: 200px;
+    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><circle cx="50" cy="50" r="40" fill="none" stroke="rgba(255,255,255,0.1)" stroke-width="2"/><circle cx="30" cy="30" r="20" fill="none" stroke="rgba(255,255,255,0.1)" stroke-width="1"/></svg>');
+    opacity: 0.3;
+}
+
+.challenge-content h1 {
+    font-size: 1.8rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+.challenge-content p {
+    font-size: 1rem;
+    opacity: 0.9;
+    margin-bottom: 1rem;
+}
+
+.challenge-progress {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.challenge-progress span {
+    font-size: 0.9rem;
+    opacity: 0.9;
+}
+
+.progress-bar {
+    width: 300px;
+    height: 6px;
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 3px;
+    overflow: hidden;
+}
+
+.progress-fill {
+    height: 100%;
+    background: white;
+    border-radius: 3px;
+    transition: width 0.3s ease;
+}
+
+.challenge-play {
+    z-index: 1;
+}
+
+.play-btn {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background: white;
+    border: none;
+    color: #1e3a8a;
+    font-size: 1.5rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.3s ease;
+}
+
+.play-btn:hover {
+    transform: scale(1.1);
+}
+
+/* Dashboard Grid */
+.dashboard-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 1.5rem;
+    grid-template-areas: 
+        "stats leaderboard credentials"
+        "goals dome activity"
+        "weekly sidebar sidebar";
+}
+
+.challenges-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 1.5rem;
+    grid-template-areas: 
+        "progress leaderboard modules"
+        "activity dome-challenges dome-bottom";
+}
+
+.journey-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 1.5rem;
+    grid-template-areas: 
+        "progress journey credentials"
+        "activity recommendations sidebar";
+}
+
+/* Card Styles */
+.card {
+    background: white;
+    border-radius: 12px;
+    padding: 1.5rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    border: 1px solid #e0e0e0;
+}
+
+.card h3 {
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    color: #161616;
+}
+
+/* Personal Stats */
+.personal-stats {
+    grid-area: stats;
+}
+
+.stats-profile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+
+.stats-avatar {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    margin-bottom: 1rem;
+}
+
+.stats-number {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #1e3a8a;
+    margin-bottom: 0.5rem;
+}
+
+.stats-label {
+    font-size: 0.9rem;
+    color: #525252;
+}
+
+.stats-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.stat-item {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.stat-bar {
+    width: 100%;
+    height: 4px;
+    background: #e0e0e0;
+    border-radius: 2px;
+    overflow: hidden;
+}
+
+.stat-fill {
+    height: 100%;
+    background: #1e3a8a;
+    border-radius: 2px;
+    transition: width 0.3s ease;
+}
+
+/* Leaderboard Card */
+.leaderboard-card {
+    grid-area: leaderboard;
+}
+
+.leaderboard-tabs {
+    display: flex;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.lb-tab {
+    background: #f4f4f4;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 6px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.lb-tab.active {
+    background: #1e3a8a;
+    color: white;
+}
+
+.leaderboard-table {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.lb-header {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1fr;
+    gap: 1rem;
+    padding: 0.5rem;
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: #525252;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.lb-row {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1fr;
+    gap: 1rem;
+    padding: 0.75rem 0.5rem;
+    align-items: center;
+    border-radius: 6px;
+    transition: background 0.3s ease;
+}
+
+.lb-row:hover {
+    background: #f8f9fa;
+}
+
+.lb-rank {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.lb-toggle {
+    background: none;
+    border: none;
+    color: #1e3a8a;
+    font-size: 1.2rem;
+    cursor: pointer;
+}
+
+/* Credentials Chart */
+.credentials-chart {
+    grid-area: credentials;
+}
+
+.chart-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.chart-bars {
+    display: flex;
+    align-items: end;
+    gap: 1rem;
+    height: 120px;
+    padding: 1rem 0;
+}
+
+.chart-bar {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.bar-fill {
+    width: 100%;
+    background: #3b82f6;
+    border-radius: 4px 4px 0 0;
+    transition: height 0.3s ease;
+}
+
+.bar-label {
+    font-size: 0.8rem;
+    font-weight: 500;
+    color: #525252;
+}
+
+.chart-legend {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.legend-item {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.8rem;
+}
+
+.legend-dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+}
+
+/* Dome Section */
+.dome-section {
+    grid-area: dome;
+}
+
+.ai-resume-btn {
+    width: 100%;
+    background: #1e3a8a;
+    color: white;
+    border: none;
+    padding: 0.75rem;
+    border-radius: 6px;
+    font-weight: 500;
+    cursor: pointer;
+    margin-bottom: 1rem;
+    transition: background 0.3s ease;
+}
+
+.ai-resume-btn:hover {
+    background: #1e40af;
+}
+
+.dome-item {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 0.75rem 0;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.dome-item:last-child {
+    border-bottom: none;
+}
+
+.dome-avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+
+/* Weekly Goals */
+.weekly-goals {
+    grid-area: weekly;
+}
+
+.goal-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.75rem;
+    padding: 1rem 0;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.goal-item:last-child {
+    border-bottom: none;
+}
+
+.goal-avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    flex-shrink: 0;
+}
+
+.goal-content {
+    flex: 1;
+}
+
+.goal-content strong {
+    display: block;
+    margin-bottom: 0.25rem;
+}
+
+.goal-content p {
+    font-size: 0.9rem;
+    color: #525252;
+    margin-bottom: 0.25rem;
+}
+
+.goal-content small {
+    font-size: 0.8rem;
+    color: #888;
+}
+
+/* Activity Feed */
+.activity-feed {
+    grid-area: activity;
+}
+
+.activity-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.75rem;
+    padding: 1rem 0;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.activity-item:last-child {
+    border-bottom: none;
+}
+
+.activity-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: #f0f7ff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #1e3a8a;
+    flex-shrink: 0;
+}
+
+.activity-content {
+    flex: 1;
+}
+
+.activity-content strong {
+    display: block;
+    margin-bottom: 0.25rem;
+}
+
+.activity-content p {
+    font-size: 0.9rem;
+    color: #525252;
+    margin-bottom: 0.25rem;
+}
+
+.activity-content small {
+    font-size: 0.8rem;
+    color: #888;
+}
+
+/* Right Sidebar */
+.right-sidebar {
+    grid-area: sidebar;
+}
+
+.sidebar-item {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 1rem 0;
+}
+
+.sidebar-avatar {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    flex-shrink: 0;
+}
+
+.sidebar-btn {
+    background: #1e3a8a;
+    color: white;
+    border: none;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    margin-left: auto;
+}
+
+/* Community Feed Page */
+.feed-container {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 2rem;
+}
+
+.feed-main h2 {
+    margin-bottom: 2rem;
+    color: #161616;
+}
+
+.feed-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    padding: 1.5rem;
+    background: white;
+    border-radius: 12px;
+    margin-bottom: 1rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.feed-avatar {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    flex-shrink: 0;
+}
+
+.feed-badge {
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.feed-content {
+    flex: 1;
+}
+
+.feed-header {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.feed-content p {
+    margin-bottom: 0.25rem;
+    color: #525252;
+}
+
+/* Notifications Panel */
+.notifications-panel {
+    background: white;
+    border-radius: 12px;
+    padding: 1.5rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.notifications-panel h3 {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+    color: #161616;
+}
+
+.notification-item {
+    padding: 1rem 0;
+    border-bottom: 1px solid #f0f0f0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.notification-item:last-child {
+    border-bottom: none;
+}
+
+.view-btn {
+    background: #1e3a8a;
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 6px;
+    font-size: 0.8rem;
+    cursor: pointer;
+}
+
+/* Challenge Progress Card */
+.challenge-progress-card {
+    grid-area: progress;
+}
+
+.progress-circle {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 1.5rem;
+}
+
+.circle-progress {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background: conic-gradient(#1e3a8a 0deg 180deg, #e0e0e0 180deg 360deg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 0.5rem;
+    position: relative;
+}
+
+.circle-progress::before {
+    content: '';
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background: white;
+    position: absolute;
+}
+
+.progress-text {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: #1e3a8a;
+    z-index: 1;
+}
+
+.progress-stats {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.stat {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.stat-btn {
+    background: #f0f0f0;
+    border: none;
+    padding: 0.25rem 0.5rem;
+    border-radius: 4px;
+    font-size: 0.8rem;
+    cursor: pointer;
+}
+
+/* Challenge Modules */
+.challenge-modules {
+    grid-area: modules;
+}
+
+.module-item {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 1rem 0;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.module-item:last-child {
+    border-bottom: none;
+}
+
+.module-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 8px;
+    flex-shrink: 0;
+}
+
+.module-content {
+    flex: 1;
+}
+
+.module-content strong {
+    display: block;
+    margin-bottom: 0.25rem;
+}
+
+.module-content p {
+    font-size: 0.9rem;
+    color: #525252;
+}
+
+.module-btn {
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 6px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.module-btn.completed {
+    background: #dcfce7;
+    color: #16a34a;
+}
+
+.module-btn.start {
+    background: #1e3a8a;
+    color: white;
+}
+
+.module-btn.start:hover {
+    background: #1e40af;
+}
+
+/* Learning Journey */
+.my-progress {
+    grid-area: progress;
+}
+
+.progress-main {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.progress-number {
+    font-size: 3rem;
+    font-weight: 700;
+    color: #1e3a8a;
+}
+
+.progress-details {
+    display: flex;
+    flex-direction: column;
+}
+
+.progress-item {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #525252;
+}
+
+.learning-journey-card {
+    grid-area: journey;
+}
+
+.journey-tabs {
+    display: flex;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.journey-tab {
+    background: #f4f4f4;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 6px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.journey-tab.active {
+    background: #1e3a8a;
+    color: white;
+}
+
+.journey-path {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.journey-step {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.step-circle {
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background: #e0e0e0;
+    flex-shrink: 0;
+}
+
+.journey-step.completed .step-circle {
+    background: #1e3a8a;
+}
+
+.journey-step.current .step-circle {
+    background: #3b82f6;
+}
+
+.step-content {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.step-number {
+    font-weight: 600;
+    color: #161616;
+}
+
+.step-details {
+    text-align: right;
+}
+
+.step-name {
+    font-size: 0.9rem;
+    color: #525252;
+}
+
+.step-points {
+    font-size: 0.8rem;
+    color: #888;
+}
+
+.journey-skills {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.skill-group {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.skill-circle {
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background: #e0e0e0;
+    flex-shrink: 0;
+}
+
+.skill-circle.completed {
+    background: #1e3a8a;
+}
+
+.skill-details {
+    flex: 1;
+}
+
+.skill-name {
+    font-weight: 600;
+    margin-bottom: 0.25rem;
+}
+
+.skill-items {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.skill-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: #e0e0e0;
+}
+
+.skill-dot.active {
+    background: #1e3a8a;
+}
+
+.skill-label {
+    font-size: 0.8rem;
+    color: #525252;
+}
+
+/* My Credentials */
+.my-credentials {
+    grid-area: credentials;
+}
+
+.credentials-header {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin-bottom: 1.5rem;
+}
+
+.credentials-header i {
+    font-size: 2rem;
+    color: #1e3a8a;
+}
+
+.credentials-chart {
+    margin-top: 1rem;
+}
+
+.chart-labels {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 0.5rem;
+    font-size: 0.8rem;
+    color: #525252;
+}
+
+/* Personalized Recommendations */
+.personalized-recommendations {
+    grid-area: recommendations;
+}
+
+.recommendation-item {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 0.75rem 0;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.recommendation-item:last-child {
+    border-bottom: none;
+}
+
+.rec-avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+
+/* Activity Feed Journey */
+.activity-feed-journey {
+    grid-area: activity;
+}
+
+.activity-chart {
+    margin-bottom: 1rem;
+}
+
+.chart-pattern {
+    height: 80px;
+    background: #f8f9fa;
+    border-radius: 8px;
+    padding: 1rem;
+    position: relative;
+}
+
+.pattern-lines {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    height: 100%;
+}
+
+.pattern-line {
+    height: 2px;
+    background: #e0e0e0;
+    border-radius: 1px;
+}
+
+.pattern-dots {
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+    display: flex;
+    gap: 0.5rem;
+}
+
+.pattern-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: #1e3a8a;
+}
+
+.activity-avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+
+/* Right Sidebar Journey */
+.right-sidebar-journey {
+    grid-area: sidebar;
+}
+
+.sidebar-recommendations {
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.rec-item {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 0.75rem 0;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.rec-item:last-child {
+    border-bottom: none;
+}
+
+.rec-item i {
+    font-size: 1.5rem;
+    color: #1e3a8a;
+}
+
+/* Modal Styles */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content {
+    background-color: white;
+    margin: 5% auto;
+    border-radius: 12px;
+    width: 90%;
+    max-width: 600px;
+    max-height: 80vh;
+    overflow-y: auto;
+}
+
+.modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.modal-header h2 {
+    margin: 0;
+    color: #161616;
+}
+
+.close-btn {
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: #525252;
+}
+
+.modal-body {
+    padding: 1.5rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+}
+
+.upload-area {
+    border: 2px dashed #1e3a8a;
+    border-radius: 8px;
+    padding: 2rem;
+    text-align: center;
+    background: #f8f9ff;
+}
+
+.upload-area i {
+    font-size: 2rem;
+    color: #1e3a8a;
+    margin-bottom: 1rem;
+}
+
+.upload-btn {
+    background: #1e3a8a;
+    color: white;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    border-radius: 6px;
+    cursor: pointer;
+    margin-top: 1rem;
+}
+
+.analysis-score {
+    text-align: center;
+}
+
+.score-circle {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background: conic-gradient(#1e3a8a 0deg 306deg, #e0e0e0 306deg 360deg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 1rem auto;
+    position: relative;
+}
+
+.score-circle::before {
+    content: '';
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background: white;
+    position: absolute;
+}
+
+.score-number {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #1e3a8a;
+    z-index: 1;
+}
+
+.download-btn {
+    background: #1e3a8a;
+    color: white;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    border-radius: 6px;
+    cursor: pointer;
+    margin-top: 1rem;
+}
+
+.personalized-recommendations-modal {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.close-modal-btn {
+    background: #f4f4f4;
+    color: #161616;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    border-radius: 6px;
+    cursor: pointer;
+    margin-top: 1rem;
+}
+
+/* Job Board Styles */
+.job-board-container {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.job-board-header {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.job-board-header h2 {
+    font-size: 2rem;
+    font-weight: 600;
+    color: #161616;
+    margin-bottom: 0.5rem;
+}
+
+.job-board-header p {
+    font-size: 1.1rem;
+    color: #525252;
+}
+
+.job-filters {
+    display: flex;
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+    padding: 1.5rem;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.filter-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    flex: 1;
+}
+
+.filter-group label {
+    font-weight: 500;
+    color: #161616;
+    font-size: 0.9rem;
+}
+
+.filter-select {
+    padding: 0.75rem;
+    border: 1px solid #e0e0e0;
+    border-radius: 6px;
+    font-size: 0.9rem;
+    background: white;
+    cursor: pointer;
+}
+
+.filter-select:focus {
+    outline: none;
+    border-color: #1e3a8a;
+}
+
+.job-listings {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.job-card {
+    background: white;
+    border-radius: 12px;
+    padding: 1.5rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    border: 1px solid #e0e0e0;
+    transition: all 0.3s ease;
+}
+
+.job-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+}
+
+.job-card.featured {
+    border-left: 4px solid #1e3a8a;
+    background: linear-gradient(135deg, #ffffff 0%, #f8f9ff 100%);
+}
+
+.job-header {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.company-logo {
+    flex-shrink: 0;
+}
+
+.company-logo-img {
+    width: 50px;
+    height: 50px;
+    border-radius: 8px;
+    object-fit: cover;
+    border: 1px solid #e0e0e0;
+}
+
+.job-title-section {
+    flex: 1;
+}
+
+.job-title-section h3 {
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: #161616;
+    margin-bottom: 0.25rem;
+}
+
+.company-name {
+    font-size: 1rem;
+    color: #1e3a8a;
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+}
+
+.job-meta {
+    display: flex;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+}
+
+.job-meta span {
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+    font-size: 0.9rem;
+    color: #525252;
+}
+
+.job-meta i {
+    color: #888;
+}
+
+.job-actions {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 0.5rem;
+}
+
+.featured-badge {
+    background: #1e3a8a;
+    color: white;
+    padding: 0.25rem 0.75rem;
+    border-radius: 12px;
+    font-size: 0.8rem;
+    font-weight: 500;
+}
+
+.apply-btn {
+    background: #1e3a8a;
+    color: white;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    border-radius: 6px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.apply-btn:hover {
+    background: #1e40af;
+}
+
+.job-description {
+    margin-top: 1rem;
+}
+
+.job-description p {
+    color: #525252;
+    line-height: 1.6;
+    margin-bottom: 1rem;
+}
+
+.job-requirements h4 {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: #161616;
+    margin-bottom: 0.5rem;
+}
+
+.skill-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.skill-tag {
+    background: #f0f7ff;
+    color: #1e3a8a;
+    padding: 0.25rem 0.75rem;
+    border-radius: 12px;
+    font-size: 0.8rem;
+    font-weight: 500;
+    border: 1px solid #e0e7ff;
+}
+
+.credential-match {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: #dcfce7;
+    color: #16a34a;
+    padding: 0.5rem 0.75rem;
+    border-radius: 6px;
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+.credential-match i {
+    color: #16a34a;
+}
+
+.job-board-footer {
+    text-align: center;
+    margin-top: 2rem;
+    padding: 2rem;
+}
+
+.load-more-btn {
+    background: #1e3a8a;
+    color: white;
+    border: none;
+    padding: 0.75rem 2rem;
+    border-radius: 6px;
+    font-weight: 500;
+    cursor: pointer;
+    margin-bottom: 1rem;
+    transition: background 0.3s ease;
+}
+
+.load-more-btn:hover {
+    background: #1e40af;
+}
+
+.job-count {
+    color: #525252;
+    font-size: 0.9rem;
+}
+
+/* Responsive Design for Job Board */
+@media (max-width: 768px) {
+    .job-filters {
+        flex-direction: column;
+        gap: 1rem;
+    }
+    
+    .job-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    .job-actions {
+        align-items: flex-start;
+        flex-direction: row;
+        width: 100%;
+        justify-content: space-between;
+    }
+    
+    .job-meta {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+    
+    .skill-tags {
+        justify-content: flex-start;
+    }
+}
+@media (max-width: 1024px) {
+    .dashboard-grid,
+    .challenges-grid,
+    .journey-grid {
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas: 
+            "stats leaderboard"
+            "credentials dome"
+            "goals activity"
+            "weekly sidebar";
+    }
+    
+    .feed-container {
+        grid-template-columns: 1fr;
+    }
+    
+    .modal-body {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 768px) {
+    .header-content {
+        padding: 0 1rem;
+    }
+    
+    .nav-container {
+        padding: 0 1rem;
+    }
+    
+    .main-content {
+        padding: 1rem;
+    }
+    
+    .dashboard-grid,
+    .challenges-grid,
+    .journey-grid {
+        grid-template-columns: 1fr;
+        grid-template-areas: 
+            "stats"
+            "leaderboard"
+            "credentials"
+            "dome"
+            "goals"
+            "activity"
+            "weekly"
+            "sidebar";
+    }
+    
+    .challenge-hero {
+        flex-direction: column;
+        text-align: center;
+        gap: 1rem;
+    }
+    
+    .progress-bar {
+        width: 100%;
+    }
+    
+    .nav-container {
+        overflow-x: auto;
+    }
+    
+    .nav-tab {
+        white-space: nowrap;
+    }
+}
+
+/* --- Enhancements for Interactivity --- */
+
+/* Smooth transition for page switching */
+.page {
+    display: none;
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+.page.active {
+    display: block;
+}
+
+/* Modal fade-in animation */
+.modal {
+    animation: fadeIn 0.3s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
