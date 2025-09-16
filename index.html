@@ -1,0 +1,1082 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IBM SkillsBuild Community Hub</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header class="header">
+        <div class="header-content">
+            <div class="header-left">
+                <img src="https://www.ibm.com/brand/experience-guides/developer/b1db1ae501d522a1a4b49613fe07c9f1/01_8-bar-positive.svg" alt="IBM" class="ibm-logo">
+                <span class="brand-text">IBM SkillsBuild Community Hub</span>
+            </div>
+            <div class="header-right">
+                <div class="notifications">
+                    <i class="fas fa-bell"></i>
+                </div>
+                <div class="user-menu">
+                    <span>Dashboard</span>
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="user-profile">
+                    <img src="https://via.placeholder.com/40x40/0f62fe/ffffff?text=U" alt="User" class="profile-avatar">
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <nav class="nav-tabs">
+        <div class="nav-container">
+            <button class="nav-tab active" data-page="dashboard">Dashboard</button>
+            <button class="nav-tab" data-page="challenges">Challenges</button>
+            <button class="nav-tab" data-page="leaderboard">Leaderboard</button>
+            <button class="nav-tab" data-page="job-board">Job Board</button>
+        </div>
+    </nav>
+
+    <main class="main-content">
+        <div id="dashboard" class="page active">
+            <div class="challenge-hero">
+                <div class="challenge-content">
+                    <h1>Data Analytics Mastery Challenge</h1>
+                    <p>In wisigit thi alolesanes or wund for poure?</p>
+                    <div class="challenge-progress">
+                        <span>Week 3/6 Completed</span>
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 50%"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="challenge-play">
+                    <button class="play-btn">
+                        <i class="fas fa-play"></i>
+                    </button>
+                </div>
+            </div>
+
+            <div class="dashboard-grid">
+                <div class="card personal-stats">
+                    <h3>Personal Stats</h3>
+                    <div class="stats-profile">
+                        <img src="profile.jpg" alt="Profile" class="stats-avatar">
+                        <div class="stats-number">12</div>
+                        <div class="stats-label">Credentials Earned</div>
+                    </div>
+                    <div class="stats-list">
+                        <div class="stat-item">
+                            <span class="stat-label">Credentials Earned</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-label">156 Learning Hours</span>
+                            <div class="stat-bar">
+                                <div class="stat-fill" style="width: 60%"></div>
+                            </div>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-label">4 Peers Helped</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-label">8 Peers Helped</span>
+                            <div class="stat-bar">
+                                <div class="stat-fill" style="width: 40%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card leaderboard-card">
+                    <h3>Gamified Leaderboards</h3>
+                    <div class="leaderboard-tabs">
+                        <button class="lb-tab active">GLOBAL</button>
+                        <button class="lb-tab">SG</button>
+                    </div>
+                    <div class="leaderboard-table">
+                        <div class="lb-header">
+                            <span>Rank</span>
+                            <span>Name</span>
+                            <span>Hours</span>
+                            <span>Max 3 Ypts</span>
+                        </div>
+                        <div class="lb-row">
+                            <div class="lb-rank">
+                                <i class="fas fa-trophy" style="color: #ffd700;"></i>
+                                <span>Alex Chen</span>
+                            </div>
+                            <span>1</span>
+                            <span>15 2pts</span>
+                            <button class="lb-toggle">
+                                <i class="fas fa-toggle-on"></i>
+                            </button>
+                        </div>
+                        <div class="lb-row">
+                            <div class="lb-rank">
+                                <i class="fas fa-trophy" style="color: #ffd700;"></i>
+                                <span>Priya Singh</span>
+                            </div>
+                            <span>2</span>
+                            <span>19 2pts</span>
+                            <button class="lb-toggle">
+                                <i class="fas fa-toggle-on"></i>
+                            </button>
+                        </div>
+                        <div class="lb-row">
+                            <div class="lb-rank">
+                                <i class="fas fa-trophy" style="color: #ffd700;"></i>
+                                <span>Priya Singh</span>
+                            </div>
+                            <span>3</span>
+                            <span>16 3pts</span>
+                            <button class="lb-toggle">
+                                <i class="fas fa-toggle-on"></i>
+                            </button>
+                        </div>
+                        <div class="lb-row">
+                            <div class="lb-rank">
+                                <i class="fas fa-trophy" style="color: #ffd700;"></i>
+                                <span>Ben Carter</span>
+                            </div>
+                            <span>5</span>
+                            <span>12 3pts</span>
+                            <button class="lb-toggle">
+                                <i class="fas fa-toggle-on"></i>
+                            </button>
+                        </div>
+                        <div class="lb-row">
+                            <div class="lb-rank">
+                                <i class="fas fa-trophy" style="color: #ffd700;"></i>
+                                <span>Ben Carter</span>
+                            </div>
+                            <span>7</span>
+                            <span>15 6pts</span>
+                            <button class="lb-toggle">
+                                <i class="fas fa-toggle-on"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card credentials-chart">
+                    <h3>Credentials Earned</h3>
+                    <div class="chart-container">
+                        <div class="chart-bars">
+                            <div class="chart-bar" style="height: 40%">
+                                <div class="bar-fill"></div>
+                                <span class="bar-label">You</span>
+                            </div>
+                            <div class="chart-bar" style="height: 70%">
+                                <div class="bar-fill"></div>
+                                <span class="bar-label">213</span>
+                            </div>
+                            <div class="chart-bar" style="height: 100%">
+                                <div class="bar-fill"></div>
+                                <span class="bar-label">356</span>
+                            </div>
+                        </div>
+                        <div class="chart-legend">
+                            <div class="legend-item">
+                                <span class="legend-dot" style="background: #e0e0e0;"></span>
+                                <span>Credentials</span>
+                            </div>
+                            <div class="legend-item">
+                                <span class="legend-dot" style="background: #a0a0a0;"></span>
+                                <span>Tracking Rivard</span>
+                            </div>
+                            <div class="legend-item">
+                                <span class="legend-dot" style="background: #0f62fe;"></span>
+                                <span>Per Crms</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card dome-section">
+                    <h3>Dome</h3>
+                    <button class="ai-resume-btn">AI Resume Coach</button>
+                    <div class="dome-item">
+                        <i class="fas fa-arrow-up"></i>
+                        <div>
+                            <strong>Ner Sing Msing</strong> Ins tris
+                            <br><small>lorat dend tor tottet</small>
+                        </div>
+                    </div>
+                    <div class="dome-item">
+                        <strong>Han shestluck</strong>
+                        <br><small>Optimize Your Resume</small>
+                    </div>
+                </div>
+
+                <div class="card weekly-goals">
+                    <h3>Berls Week Gruals</h3>
+                    <div class="goal-item">
+                        <img src="https://via.placeholder.com/40x40/0f62fe/ffffff?text=AC" alt="Alex Chen" class="goal-avatar">
+                        <div class="goal-content">
+                            <strong>Alex Chen</strong>
+                            <p>"Earna sened 'Data Science Foundations' badge to omitting taetet"</p>
+                        </div>
+                    </div>
+                    <div class="goal-item">
+                        <img src="https://via.placeholder.com/40x40/0f62fe/ffffff?text=PC" alt="Priya Chen" class="goal-avatar">
+                        <div class="goal-content">
+                            <strong>Priya Chen</strong>
+                            <p>earned "Data Sciercendations" badge</p>
+                            <small>Wrong ans dant 3 peers per week</small>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card activity-feed">
+                    <h3>Community Activity Feed</h3>
+                    <div class="activity-item">
+                        <div class="activity-icon">
+                            <i class="fas fa-brain"></i>
+                        </div>
+                        <div class="activity-content">
+                            <strong>AI Resume Coach</strong>
+                            <p>Answer idart ary y question to move forward</p>
+                            <small>Repeat quo until ans currently</small>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card right-sidebar">
+                    <div class="sidebar-item">
+                        <img src="https://via.placeholder.com/50x50/0f62fe/ffffff?text=YW" alt="Profile" class="sidebar-avatar">
+                        <div>
+                            <strong>You writ ts</strong>
+                            <br><strong>Changuning</strong>
+                            <br><small>Pate wells</small>
+                        </div>
+                        <button class="sidebar-btn">
+                            <i class="fas fa-plus"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="community-feed" class="page">
+            <div class="feed-container">
+                <div class="feed-main">
+                    <h2>Community Activity Feed</h2>
+                    
+                    <div class="feed-item">
+                        <img src="alex-chen.jpg" alt="Alex Chen" class="feed-avatar">
+                        <div class="feed-content">
+                            <div class="feed-header">
+                                <strong>Alex Chen</strong>
+                                <i class="fas fa-comment" style="color: #0f62fe;"></i>
+                            </div>
+                            <p>needs need help with "Data Science Foundations"</p>
+                            <p>Can anyone explain supervised vs. unsepaprucd learning?</p>
+                        </div>
+                    </div>
+
+                    <div class="feed-item">
+                        <img src="priya-singh.jpg" alt="Priya Singh" class="feed-avatar">
+                        <div class="feed-content">
+                            <div class="feed-header">
+                                <strong>Priya Singh</strong>
+                                <i class="fas fa-check" style="color: #24a148;"></i>
+                            </div>
+                            <p>Priya Singh helped Ben Carter with a Python coding challenge!</p>
+                        </div>
+                    </div>
+
+                    <div class="feed-item">
+                        <img src="wei-ling.jpg" alt="Wei Ling" class="feed-avatar">
+                        <div class="feed-content">
+                            <div class="feed-header">
+                                <strong>Wei Ling</strong>
+                                <i class="fas fa-calendar" style="color: #0f62fe;"></i>
+                            </div>
+                            <p>Priya Sing offered to host study session on "SQL for Data Analytics" on Friday</p>
+                        </div>
+                    </div>
+
+                    <div class="feed-item">
+                        <div class="feed-badge">
+                            <i class="fas fa-medal" style="color: #ffd700; font-size: 2rem;"></i>
+                        </div>
+                        <div class="feed-content">
+                            <p><strong>Siti Nurul</strong> earned the "Peer Mentor" badge for helping 5 peers week!</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="feed-sidebar">
+                    <div class="notifications-panel">
+                        <h3><i class="fas fa-bell"></i> Notifications</h3>
+                        
+                        <div class="notification-item">
+                            <p>You have 3 new help requests</p>
+                            <button class="view-btn">View</button>
+                        </div>
+
+                        <div class="notification-item">
+                            <p>Ben Carter replied to your question on Python syntax</p>
+                        </div>
+
+                        <div class="notification-item">
+                            <p>"fun've been mentioned in post by Raj Patel</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="challenges" class="page">
+            <div class="challenges-container">
+                <div class="challenge-hero">
+                    <div class="challenge-content">
+                        <h1>Data Analytics Mastery Challenge</h1>
+                        <p>In wisigit thi alolesanes poure?</p>
+                        <div class="challenge-progress">
+                            <span>Week 3/6 Completed</span>
+                            <div class="progress-bar">
+                                <div class="progress-fill" style="width: 50%"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="challenge-play">
+                        <button class="play-btn">
+                            <i class="fas fa-play"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="challenges-grid">
+                    <div class="card challenge-progress-card">
+                        <h3>Challenge Progress</h3>
+                        <div class="progress-circle">
+                            <div class="circle-progress" data-progress="50">
+                                <span class="progress-text">50%</span>
+                            </div>
+                            <p>Modules Completes</p>
+                        </div>
+                        <div class="progress-stats">
+                            <div class="stat">
+                                <span class="stat-label">Points Earned</span>
+                            </div>
+                            <div class="stat">
+                                <span class="stat-label">7 Peers Helped</span>
+                            </div>
+                            <div class="stat">
+                                <span class="stat-label">Sueth Dpoin</span>
+                                <span class="stat-label">Puli Oruhed</span>
+                                <button class="stat-btn">24H</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card leaderboard-global">
+                        <h3>Gamified Leaderboard (Global)</h3>
+                        <div class="leaderboard-tabs">
+                            <button class="lb-tab active">GLOBAL</button>
+                            <button class="lb-tab">SG</button>
+                        </div>
+                        <div class="leaderboard-table">
+                            <div class="lb-header">
+                                <span>Rank</span>
+                                <span>Name</span>
+                                <span>Hours</span>
+                                <span>Max 3 Ypts</span>
+                            </div>
+                            <div class="lb-row">
+                                <div class="lb-rank">
+                                    <i class="fas fa-trophy" style="color: #ffd700;"></i>
+                                    <span>Alex Chen</span>
+                                </div>
+                                <span>1</span>
+                                <span>18 3pts</span>
+                                <button class="lb-toggle">
+                                    <i class="fas fa-toggle-on"></i>
+                                </button>
+                            </div>
+                            <div class="lb-row">
+                                <div class="lb-rank">
+                                    <i class="fas fa-trophy" style="color: #ffd700;"></i>
+                                    <span>Priya Singh</span>
+                                </div>
+                                <span>2</span>
+                                <span>48 3pts</span>
+                                <button class="lb-toggle">
+                                    <i class="fas fa-toggle-on"></i>
+                                </button>
+                            </div>
+                            <div class="lb-row">
+                                <div class="lb-rank">
+                                    <i class="fas fa-trophy" style="color: #ffd700;"></i>
+                                    <span>Priya Singh</span>
+                                </div>
+                                <span>3</span>
+                                <span>28 2pts</span>
+                                <button class="lb-toggle">
+                                    <i class="fas fa-toggle-on"></i>
+                                </button>
+                            </div>
+                            <div class="lb-row">
+                                <div class="lb-rank">
+                                    <i class="fas fa-trophy" style="color: #ffd700;"></i>
+                                    <span>Ben Jurtur</span>
+                                </div>
+                                <span>8</span>
+                                <span>80 0pts</span>
+                                <button class="lb-toggle">
+                                    <i class="fas fa-toggle-on"></i>
+                                </button>
+                            </div>
+                            <div class="lb-row">
+                                <div class="lb-rank">
+                                    <i class="fas fa-trophy" style="color: #ffd700;"></i>
+                                    <span>Raj Patel</span>
+                                </div>
+                                <span>6</span>
+                                <span>62 0pts</span>
+                                <button class="lb-toggle">
+                                    <i class="fas fa-toggle-on"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card challenge-modules">
+                        <h3>Challenge Moduless</h3>
+                        <div class="module-item completed">
+                            <img src="https://via.placeholder.com/40x40/24a148/ffffff?text=DS" alt="Data Science" class="module-icon">
+                            <div class="module-content">
+                                <strong>Data Science Foundations</strong>
+                                <p>Yout Tumes</p>
+                            </div>
+                            <button class="module-btn completed">
+                                <i class="fas fa-check"></i>
+                            </button>
+                        </div>
+                        <div class="module-item completed">
+                            <img src="https://via.placeholder.com/40x40/24a148/ffffff?text=SQL" alt="SQL" class="module-icon">
+                            <div class="module-content">
+                                <strong>SQL for Antor Seued</strong>
+                                <p>Cueibuntes</p>
+                            </div>
+                            <button class="module-btn completed">
+                                <i class="fas fa-check"></i>
+                            </button>
+                        </div>
+                        <div class="module-item current">
+                            <img src="https://via.placeholder.com/40x40/0f62fe/ffffff?text=PY" alt="Python" class="module-icon">
+                            <div class="module-content">
+                                <strong>Python for Data</strong>
+                                <p>Youk Data Petpek</p>
+                            </div>
+                            <button class="module-btn start">Start</button>
+                        </div>
+                    </div>
+
+                    <div class="card dome-challenges">
+                        <h3>Dome</h3>
+                        <div class="dome-item">
+                            <strong>Challenge Leatied fins ins</strong>
+                        </div>
+                        <div class="dome-item">
+                            <img src="https://via.placeholder.com/40x40/0f62fe/ffffff?text=DS" alt="Data Science" class="dome-avatar">
+                            <div>
+                                <strong>Data Science Foundation</strong>
+                                <br><small>Mor the quurs</small>
+                            </div>
+                        </div>
+                        <h4>Peer Help Activity</h4>
+                        <div class="dome-item">
+                            <img src="https://via.placeholder.com/40x40/0f62fe/ffffff?text=DS" alt="Data Science" class="dome-avatar">
+                            <div>
+                                <strong>Data Science Seajrfits'td</strong>
+                                <br><small>Due Croek</small>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card activity-feed-challenges">
+                        <h3>Community Activity Feed</h3>
+                        <div class="activity-item">
+                            <div class="activity-icon">
+                                <i class="fas fa-brain"></i>
+                            </div>
+                            <div class="activity-content">
+                                <strong>AI Resume Coach</strong>
+                                <p>Answer idart ary y question to move forward</p>
+                                <small>Repeat qus until</small>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card dome-bottom">
+                        <h3>Dome</h3>
+                        <button class="ai-resume-btn">AI Resume Coach</button>
+                        <div class="dome-item">
+                            <i class="fas fa-arrow-up"></i>
+                            <div>
+                                <strong>Ner Sing Msing</strong> Ins tris
+                                <br><small>lorat dend tor tottet</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="learning-journey" class="page">
+            <div class="journey-container">
+                <div class="journey-grid">
+                    <div class="card my-progress">
+                        <h3>My Progress</h3>
+                        <div class="progress-main">
+                            <div class="progress-number">12</div>
+                            <div class="progress-details">
+                                <div class="progress-item">556</div>
+                                <div class="progress-label">Credentials Earned</div>
+                            </div>
+                        </div>
+                        <div class="progress-stats">
+                            <div class="stat-item">
+                                <span>Credentials Earned</span>
+                            </div>
+                            <div class="stat-item">
+                                <span>156 Learning Hours</span>
+                            </div>
+                            <div class="stat-item">
+                                <span>#23 Overall Rank</span>
+                            </div>
+                            <div class="stat-item">
+                                <span>8 Peers Helped</span>
+                                <div class="stat-bar">
+                                    <div class="stat-fill" style="width: 40%"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card learning-journey-card">
+                        <h3>My Learning Journey</h3>
+                        <div class="journey-tabs">
+                            <button class="journey-tab active">GLOBAL</button>
+                            <button class="journey-tab">SG</button>
+                        </div>
+                        <div class="journey-path">
+                            <div class="journey-step completed">
+                                <div class="step-circle"></div>
+                                <div class="step-content">
+                                    <div class="step-number">13 1085</div>
+                                    <div class="step-details">
+                                        <div class="step-name">Remre</div>
+                                        <div class="step-points">234 0025</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="journey-step completed">
+                                <div class="step-circle"></div>
+                                <div class="step-content">
+                                    <div class="step-number">12 3395</div>
+                                    <div class="step-details">
+                                        <div class="step-name">Rosore</div>
+                                        <div class="step-points">25.0 0075</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="journey-step current">
+                                <div class="step-circle"></div>
+                                <div class="step-content">
+                                    <div class="step-number">13 4935</div>
+                                    <div class="step-details">
+                                        <div class="step-name">Hemew</div>
+                                        <div class="step-points">23.1 0735</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="journey-step">
+                                <div class="step-circle"></div>
+                                <div class="step-content">
+                                    <div class="step-number">82 5pts</div>
+                                    <div class="step-details">
+                                        <div class="step-name">Ne uly</div>
+                                        <div class="step-points">27.1 0015</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="journey-skills">
+                            <div class="skill-group">
+                                <div class="skill-circle completed"></div>
+                                <div class="skill-details">
+                                    <div class="skill-name">Alepnon</div>
+                                    <div class="skill-items">
+                                        <span class="skill-dot active"></span>
+                                        <span class="skill-label">Hoset</span>
+                                        <span class="skill-dot active"></span>
+                                        <span class="skill-label">Hetool</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="skill-group">
+                                <div class="skill-circle"></div>
+                                <div class="skill-details">
+                                    <div class="skill-name">Dersery</div>
+                                    <div class="skill-items">
+                                        <span class="skill-dot active"></span>
+                                        <span class="skill-label">Keerd pann</span>
+                                        <span class="skill-dot active"></span>
+                                        <span class="skill-label">Ply</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="skill-group">
+                                <div class="skill-circle"></div>
+                                <div class="skill-details">
+                                    <div class="skill-name">Deepand</div>
+                                    <div class="skill-items">
+                                        <span class="skill-dot active"></span>
+                                        <span class="skill-label">Esuncate</span>
+                                        <span class="skill-dot active"></span>
+                                        <span class="skill-label">Realize</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="skill-group">
+                                <div class="skill-circle"></div>
+                                <div class="skill-details">
+                                    <div class="skill-name">Doners</div>
+                                    <div class="skill-items">
+                                        <span class="skill-dot active"></span>
+                                        <span class="skill-label">Heine</span>
+                                        <span class="skill-dot active"></span>
+                                        <span class="skill-label">By</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card my-credentials">
+                        <h3>My Credentiats</h3>
+                        <div class="credentials-header">
+                            <i class="fas fa-user-circle"></i>
+                            <div>
+                                <strong>Data Science</strong>
+                                <p>Founding Foundations</p>
+                            </div>
+                        </div>
+                        <div class="credentials-chart">
+                            <div class="chart-bars">
+                                <div class="chart-bar" data-value="165">
+                                    <div class="bar-fill" style="height: 80%"></div>
+                                </div>
+                                <div class="chart-bar" data-value="126">
+                                    <div class="bar-fill" style="height: 60%"></div>
+                                </div>
+                                <div class="chart-bar" data-value="9">
+                                    <div class="bar-fill" style="height: 20%"></div>
+                                </div>
+                                <div class="chart-bar" data-value="8">
+                                    <div class="bar-fill" style="height: 40%"></div>
+                                </div>
+                            </div>
+                            <div class="chart-labels">
+                                <span>0</span>
+                                <span>108%</span>
+                                <span>186</span>
+                                <span>24%</span>
+                                <span>253%</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card personalized-recommendations">
+                        <h3>Pirsanlized Recommendations</h3>
+                        <button class="ai-resume-btn">AI Resume Coach</button>
+                        <div class="recommendation-item">
+                            <i class="fas fa-arrow-up"></i>
+                            <div>
+                                <strong>Deep Singh</strong>
+                                <p>with TemFore badge</p>
+                            </div>
+                        </div>
+                        <div class="recommendation-item">
+                            <img src="https://via.placeholder.com/40x40/0f62fe/ffffff?text=CR" alt="Cloud" class="rec-avatar">
+                            <div>
+                                <strong>Cloud Rarized</strong>
+                                <p>Cloud Development</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card activity-feed-journey">
+                        <h3>Community Activity Feed</h3>
+                        <div class="activity-chart">
+                            <div class="chart-pattern">
+                                <div class="pattern-lines">
+                                    <div class="pattern-line"></div>
+                                    <div class="pattern-line"></div>
+                                    <div class="pattern-line"></div>
+                                    <div class="pattern-line"></div>
+                                </div>
+                                <div class="pattern-dots">
+                                    <div class="pattern-dot"></div>
+                                    <div class="pattern-dot"></div>
+                                    <div class="pattern-dot"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="activity-item">
+                            <img src="https://via.placeholder.com/40x40/0f62fe/ffffff?text=AS" alt="Answer" class="activity-avatar">
+                            <div class="activity-content">
+                                <p>Answer semed 'Data Suestion to move forwark to Pthon syntax</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card right-sidebar-journey">
+                        <div class="sidebar-item">
+                            <img src="https://via.placeholder.com/50x50/0f62fe/ffffff?text=GS" alt="Glovrey" class="sidebar-avatar">
+                            <div>
+                                <strong>Glovrey</strong>
+                                <br><strong>Sence</strong>
+                                <br><strong>Shuves</strong>
+                            </div>
+                            <button class="sidebar-btn">
+                                <i class="fas fa-plus"></i>
+                            </button>
+                        </div>
+                        <div class="sidebar-recommendations">
+                            <div class="rec-item">
+                                <i class="fas fa-cloud"></i>
+                                <div>
+                                    <strong>Cloud Feppre with</strong>
+                                    <p>Donis Bading</p>
+                                </div>
+                            </div>
+                            <div class="rec-item">
+                                <i class="fas fa-chart-bar"></i>
+                                <div>
+                                    <strong>Deep Eanning with</strong>
+                                    <p>with Python syntax</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="job-board" class="page">
+            <div class="job-board-container">
+                <div class="job-board-header">
+                    <h2>Job Opportunities</h2>
+                    <p>Discover career opportunities that match your SkillsBuild credentials</p>
+                </div>
+                
+                <div class="job-filters">
+                    <div class="filter-group">
+                        <label>Job Type:</label>
+                        <select class="filter-select">
+                            <option>All Types</option>
+                            <option>Full-time</option>
+                            <option>Part-time</option>
+                            <option>Internship</option>
+                            <option>Graduate Trainee</option>
+                        </select>
+                    </div>
+                    <div class="filter-group">
+                        <label>Industry:</label>
+                        <select class="filter-select">
+                            <option>All Industries</option>
+                            <option>Technology</option>
+                            <option>Finance</option>
+                            <option>Healthcare</option>
+                            <option>Manufacturing</option>
+                        </select>
+                    </div>
+                    <div class="filter-group">
+                        <label>Experience Level:</label>
+                        <select class="filter-select">
+                            <option>Entry Level</option>
+                            <option>1-2 years</option>
+                            <option>3-5 years</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="job-listings">
+                    <div class="job-card featured">
+                        <div class="job-header">
+                            <div class="company-logo">
+                                <img src="https://logo.clearbit.com/dbs.com" alt="DBS Bank" class="company-logo-img">
+                            </div>
+                            <div class="job-title-section">
+                                <h3>Data Analytics Graduate Trainee</h3>
+                                <p class="company-name">DBS Bank</p>
+                                <div class="job-meta">
+                                    <span class="location"><i class="fas fa-map-marker-alt"></i> Singapore</span>
+                                    <span class="job-type"><i class="fas fa-clock"></i> Full-time</span>
+                                    <span class="salary"><i class="fas fa-dollar-sign"></i> $3,500 - $4,200</span>
+                                </div>
+                            </div>
+                            <div class="job-actions">
+                                <span class="featured-badge">Featured</span>
+                                <button class="apply-btn">Apply Now</button>
+                            </div>
+                        </div>
+                        <div class="job-description">
+                            <p>Join our Graduate Trainee Program and kickstart your career in data analytics. Perfect for polytechnic graduates with data science credentials.</p>
+                            <div class="job-requirements">
+                                <h4>Required Skills:</h4>
+                                <div class="skill-tags">
+                                    <span class="skill-tag">Python</span>
+                                    <span class="skill-tag">SQL</span>
+                                    <span class="skill-tag">Data Visualization</span>
+                                    <span class="skill-tag">Statistics</span>
+                                </div>
+                            </div>
+                            <div class="credential-match">
+                                <i class="fas fa-check-circle"></i>
+                                <span>Matches your Data Science Foundations credential</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="job-card">
+                        <div class="job-header">
+                            <div class="company-logo">
+                                <img src="https://logo.clearbit.com/shopee.sg" alt="Shopee" class="company-logo-img">
+                            </div>
+                            <div class="job-title-section">
+                                <h3>Junior Software Developer</h3>
+                                <p class="company-name">Shopee Singapore</p>
+                                <div class="job-meta">
+                                    <span class="location"><i class="fas fa-map-marker-alt"></i> Singapore</span>
+                                    <span class="job-type"><i class="fas fa-clock"></i> Full-time</span>
+                                    <span class="salary"><i class="fas fa-dollar-sign"></i> $3,200 - $4,000</span>
+                                </div>
+                            </div>
+                            <div class="job-actions">
+                                <button class="apply-btn">Apply Now</button>
+                            </div>
+                        </div>
+                        <div class="job-description">
+                            <p>Entry-level position for fresh graduates to develop e-commerce solutions and gain hands-on experience in software development.</p>
+                            <div class="job-requirements">
+                                <h4>Required Skills:</h4>
+                                <div class="skill-tags">
+                                    <span class="skill-tag">JavaScript</span>
+                                    <span class="skill-tag">React</span>
+                                    <span class="skill-tag">Node.js</span>
+                                    <span class="skill-tag">Git</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="job-card">
+                        <div class="job-header">
+                            <div class="company-logo">
+                                <img src="https://logo.clearbit.com/grab.com" alt="Grab" class="company-logo-img">
+                            </div>
+                            <div class="job-title-section">
+                                <h3>Business Intelligence Intern</h3>
+                                <p class="company-name">Grab Holdings</p>
+                                <div class="job-meta">
+                                    <span class="location"><i class="fas fa-map-marker-alt"></i> Singapore</span>
+                                    <span class="job-type"><i class="fas fa-clock"></i> Internship</span>
+                                    <span class="salary"><i class="fas fa-dollar-sign"></i> $1,200 - $1,500</span>
+                                </div>
+                            </div>
+                            <div class="job-actions">
+                                <button class="apply-btn">Apply Now</button>
+                            </div>
+                        </div>
+                        <div class="job-description">
+                            <p>6-month internship program focusing on data analysis and business intelligence for Southeast Asia's leading super app.</p>
+                            <div class="job-requirements">
+                                <h4>Required Skills:</h4>
+                                <div class="skill-tags">
+                                    <span class="skill-tag">Excel</span>
+                                    <span class="skill-tag">Tableau</span>
+                                    <span class="skill-tag">SQL</span>
+                                    <span class="skill-tag">Analytics</span>
+                                </div>
+                            </div>
+                            <div class="credential-match">
+                                <i class="fas fa-check-circle"></i>
+                                <span>Matches your Business Intelligence credential</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="job-card">
+                        <div class="job-header">
+                            <div class="company-logo">
+                                <img src="https://logo.clearbit.com/singtel.com" alt="Singtel" class="company-logo-img">
+                            </div>
+                            <div class="job-title-section">
+                                <h3>Cloud Infrastructure Associate</h3>
+                                <p class="company-name">Singtel</p>
+                                <div class="job-meta">
+                                    <span class="location"><i class="fas fa-map-marker-alt"></i> Singapore</span>
+                                    <span class="job-type"><i class="fas fa-clock"></i> Full-time</span>
+                                    <span class="salary"><i class="fas fa-dollar-sign"></i> $3,800 - $4,500</span>
+                                </div>
+                            </div>
+                            <div class="job-actions">
+                                <button class="apply-btn">Apply Now</button>
+                            </div>
+                        </div>
+                        <div class="job-description">
+                            <p>Join our cloud infrastructure team and help build the next generation of telecommunications solutions.</p>
+                            <div class="job-requirements">
+                                <h4>Required Skills:</h4>
+                                <div class="skill-tags">
+                                    <span class="skill-tag">AWS</span>
+                                    <span class="skill-tag">Docker</span>
+                                    <span class="skill-tag">Kubernetes</span>
+                                    <span class="skill-tag">Linux</span>
+                                </div>
+                            </div>
+                            <div class="credential-match">
+                                <i class="fas fa-check-circle"></i>
+                                <span>Matches your Cloud Computing credential</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="job-card">
+                        <div class="job-header">
+                            <div class="company-logo">
+                                <img src="https://logo.clearbit.com/accenture.com" alt="Accenture" class="company-logo-img">
+                            </div>
+                            <div class="job-title-section">
+                                <h3>Technology Consulting Analyst</h3>
+                                <p class="company-name">Accenture Singapore</p>
+                                <div class="job-meta">
+                                    <span class="location"><i class="fas fa-map-marker-alt"></i> Singapore</span>
+                                    <span class="job-type"><i class="fas fa-clock"></i> Full-time</span>
+                                    <span class="salary"><i class="fas fa-dollar-sign"></i> $3,600 - $4,300</span>
+                                </div>
+                            </div>
+                            <div class="job-actions">
+                                <button class="apply-btn">Apply Now</button>
+                            </div>
+                        </div>
+                        <div class="job-description">
+                            <p>Entry-level consulting role working with clients on digital transformation projects and technology implementations.</p>
+                            <div class="job-requirements">
+                                <h4>Required Skills:</h4>
+                                <div class="skill-tags">
+                                    <span class="skill-tag">Project Management</span>
+                                    <span class="skill-tag">Business Analysis</span>
+                                    <span class="skill-tag">Communication</span>
+                                    <span class="skill-tag">Problem Solving</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="job-card">
+                        <div class="job-header">
+                            <div class="company-logo">
+                                <img src="https://logo.clearbit.com/govtech.gov.sg" alt="GovTech" class="company-logo-img">
+                            </div>
+                            <div class="job-title-section">
+                                <h3>Cybersecurity Specialist (Fresh Graduate)</h3>
+                                <p class="company-name">GovTech Singapore</p>
+                                <div class="job-meta">
+                                    <span class="location"><i class="fas fa-map-marker-alt"></i> Singapore</span>
+                                    <span class="job-type"><i class="fas fa-clock"></i> Full-time</span>
+                                    <span class="salary"><i class="fas fa-dollar-sign"></i> $3,400 - $4,100</span>
+                                </div>
+                            </div>
+                            <div class="job-actions">
+                                <button class="apply-btn">Apply Now</button>
+                            </div>
+                        </div>
+                        <div class="job-description">
+                            <p>Protect Singapore's digital infrastructure and contribute to the nation's cybersecurity initiatives as a fresh graduate.</p>
+                            <div class="job-requirements">
+                                <h4>Required Skills:</h4>
+                                <div class="skill-tags">
+                                    <span class="skill-tag">Network Security</span>
+                                    <span class="skill-tag">Ethical Hacking</span>
+                                    <span class="skill-tag">Risk Assessment</span>
+                                    <span class="skill-tag">Incident Response</span>
+                                </div>
+                            </div>
+                            <div class="credential-match">
+                                <i class="fas fa-check-circle"></i>
+                                <span>Matches your Cybersecurity Fundamentals credential</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="job-board-footer">
+                    <button class="load-more-btn">Load More Jobs</button>
+                    <p class="job-count">Showing 6 of 47 available positions</p>
+                </div>
+            </div>
+        </div>
+
+    <div id="resume-modal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>AI Resume Coach</h2>
+                <button class="close-btn">&times;</button>
+            </div>
+            <div class="modal-body">
+                <div class="resume-upload">
+                    <div class="upload-area">
+                        <i class="fas fa-cloud-upload-alt"></i>
+                        <p>Upload Your Resume</p>
+                        <button class="upload-btn">Choose File</button>
+                    </div>
+                </div>
+                <div class="resume-analysis">
+                    <div class="analysis-score">
+                        <h3>Analysis Complete</h3>
+                        <div class="score-circle">
+                            <div class="score-number">85/100</div>
+                        </div>
+                        <p>Score based on skills matching, keywords, and formatting</p>
+                        <button class="download-btn">Download Optimized Resume</button>
+                    </div>
+                    <div class="personalized-recommendations-modal">
+                        <h3>Personalized Recommendations</h3>
+                        <div class="rec-item">
+                            <img src="https://via.placeholder.com/40x40/0f62fe/ffffff?text=DS" alt="Deep Singh" class="rec-avatar">
+                            <div>
+                                <strong>Deep Singh</strong>
+                                <p>Consider the "Data Science with Python" badge</p>
+                            </div>
+                        </div>
+                        <div class="rec-item">
+                            <i class="fas fa-cloud" style="color: #0f62fe; font-size: 2rem;"></i>
+                            <div>
+                                <strong>Cloud Rarized</strong>
+                                <p>Explore roles in Cloud Development</p>
+                            </div>
+                        </div>
+                        <div class="rec-item">
+                            <i class="fas fa-user" style="color: #0f62fe; font-size: 2rem;"></i>
+                            <div>
+                                <strong>Glovsey Sluves</strong>
+                                <p>Connect with mentors in AI Analytics</p>
+                            </div>
+                        </div>
+                        <button class="close-modal-btn">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
